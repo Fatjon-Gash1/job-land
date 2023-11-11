@@ -6,9 +6,9 @@
     <!-- -transparent img 'https://ibb.co/ZMdTdzN'
           normal img 'https://ibb.co/KKc6z5S' -->
    <p>
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/Fatjon-Gash1/JobBoard_WebApp/issues">Report a Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/Fatjon-Gash1/JobBoard_WebApp/issues">Request a Feature</a>
   </p>
 </div>
 
