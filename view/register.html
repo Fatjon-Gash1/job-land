@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="nav-bar">
+      <h1 class="M-logo">JL</h1>
+      <ul class="list">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="profile.html">About</a></li>
+        <li><a href="profile.html">Profile</a></li>
+      </ul>
+      <div class="reg_log">
+        <ul class="reg_list">
+          <li><a href="register.html">Register</a></li>
+          <li><a href="profile.html">Login</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <hr />
+    <div name="reg_log">
+      <form class="rform" method="post" name="myform">
+        <label>User Name: </label>
+        <input type="text" name="username" id="username" /><br>
+        <label>Password: </label>
+        <input type="password" name="password" id="password" /><br>
+        <input class="button" type="button" value="Register" id="submit" onclick="validate()" />
+      </form>
+    </div>
+    <hr />
+  </body>
+</html>
