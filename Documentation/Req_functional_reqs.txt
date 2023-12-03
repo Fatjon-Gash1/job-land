@@ -1,0 +1,11 @@
+Allowing users to register and log in
+Allowing users controll job posting
+Allowing users to search for jobs
+Allowing users to apply to jobs
+Providing user personalization
+Providing user management
+Providiing user analytics
+Allowing users to track their applications
+Providing a UI
+Providing message communication between users
+Allowing adims to controll the system
