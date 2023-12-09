@@ -7,36 +7,26 @@
     <script src="header.js" defer></script>
     <script src="script.js" defer></script>
     
-    <title>Document</title>
+    <title>Sign Up | JobLand</title>
   </head>
   <body>
     <div class="nav-bar">
       <h1 class="M-logo">JL</h1>
-      <ul class="list">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="jobs.html">Jobs</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="profile.html">About</a></li>
-        <li><a href="profile.html">Profile</a></li>
-      </ul>
-      <div class="reg_log">
-        <ul class="reg_list">
-          <li><a href="register.html">Register</a></li>
-          <li><a href="login.html">Login</a></li>
-        </ul>
-      </div>
     </div>
-
-    <hr />
+    
+    <h2>Register now to find the job that you've been looking for</h2>
+    <hr>
     <div name="reg_log">
       <form class="rform" method="post" name="myform">
-        <label>User Name: </label>
-        <input type="text" name="username" id="username" /><br>
-        <label>Password: </label>
-        <input type="password" name="password" id="password" /><br>
-        <input class="button" type="button" value="Register" id="submit" onclick="validate()" />
+        <label>Email</label><br>
+        <input type="email" name="email" id="email" /><br>
+        <label>Password (8+ characters)</label><br>
+        <input type="password" name="password" id="password" minlength="8" maxlength="12"/><br>
+        <p>By clicking Agree & Register, you agree to the JobLand <span>User Agreement</span>, <span>Privacy Policy</span>, and <span>Cookie Policy</span>.</p>
+        <input class="button" type="button" value="Agree & Register" id="submit" onclick="validate()" />
+        <label "></label>
       </form>
     </div>
-    <hr />
+    <hr>
   </body>
 </html>
