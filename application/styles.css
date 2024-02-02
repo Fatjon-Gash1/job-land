@@ -13,7 +13,8 @@ body {
 .M-logo {
     display: inline-block;
     color: rgb(255, 255, 255);
-    margin-left: 7em;
+    margin-left: 5em;
+    margin-right: 1em;
     padding-left: 7px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight:600;
@@ -36,30 +37,45 @@ body {
     position: relative;
 }
 
-#plans {
-    position: absolute;
-    right: 0;
-    margin-right: 27em;
-    margin-top: 2em;
-    font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #ffffff;
-}
-
 .list {
     display: inline-flex;
     padding: 10px;
+    margin-left: 5em;
     list-style: none;
-    float: right;
     border: 2px solid white;
     border-radius: 25px;
-    margin-right: 5em;
+    min-width: fit-content;
+}
+
+@media screen and (max-width: 900px) {
+    .list {
+        display: block;
+        margin-left: 1em;
+        max-width: 50%;
+    }
+    
+}
+
+@media screen and (max-width: 900px) {
+    .M-logo {
+        margin-left: 1em;
+    }
+    
+}
+
+@media screen and (max-width: 350px) {
+    .list {
+        margin-left: 1em;
+    }
+    
 }
 
 .list li{
     padding: 10px;
     padding-left: 25px;
-    border-right: 3px solid white;
+    margin-left: 5px;
+    border-right: 5px solid white;
+    border-bottom: 1px solid white;
     border-radius: 20px;
 }
 
@@ -67,24 +83,32 @@ body {
 .reg_log {
     position: relative;
     display: inline-flex;
+    float: right;
     margin-top: 1em;
+    margin-right: 1em;
     text-align: center;
     background-color: black;
+    /* border: 2px solid white; */
     border-radius: 20px;
-    padding-left: 25em;
-    padding-top: 1px;
-    padding-bottom: 2em;
+    padding: 5px;
     color: white;
     font-size: 17px;
 }
 
+@media screen and (max-width: 900px) {
+    .reg_log {
+        display: block;
+        float: left;
+    }
+    
+}
+
 .reg_log li{
-    margin-left: 2em;
     border: 3px solid white;
     padding: 10px;
+    margin-left: 12px;
     border-radius: 15px;
     display: inline-flex;
-    color: red;
 }
 
 .rform {
