@@ -218,10 +218,11 @@ h2 {
     grid-template-columns: repeat(3, 300px);
     gap: 30px;
     grid-auto-rows: minmax(150px, auto);
-    margin: 10em 10px 10em;
+    margin: 4em 10px 10em;
   }
 
   .item {
+    background-color: #dfe3e8;
     padding: 15px;
     font-size: 16px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -231,6 +232,7 @@ h2 {
   }
 
   #job-name {
+    background-color: white;
     text-align: center;
     padding-bottom: 3px;
     border-bottom: 3px solid rgb(15, 97, 220);
@@ -249,5 +251,103 @@ h2 {
   }
 
   #job-desc {
-    
+    padding-left: 9px;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
+
+  .footer {
+    text-align: center;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #000000;
+  }
+
+  .contact-form {
+    background-color: white;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, textarea {
+    background-color: white;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.section-1 {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-search[type="text"] {
+    width: 60%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.select-search {
+    padding: 10px;
+}
+
+.section-0 {
+        position: relative;
+        z-index: -1;
+        margin-top: 5em;
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.slider {
+    margin-top: 10em;
+    width: 30%;
+    margin: 20px auto;
+}
+
+.slider img {
+    margin-top: 5em;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.job-h1 {
+    margin-top: 4em;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
