@@ -12,7 +12,7 @@ body {
 
 .M-logo {
     display: inline-block;
-    color: white;
+    color: rgb(255, 255, 255);
     margin-left: 7em;
     padding-left: 7px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -29,16 +29,6 @@ body {
     right: 0;
     padding-right: 32em;
     top: 2em;
-}
-
-#search {
-    
-    display: inline-block;
-    margin-left: 2em;
-    margin-top: 2em;
-    font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #ffffff;
 }
 
 .list-0 {
