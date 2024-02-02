@@ -11,10 +11,8 @@
   </head>
   <body>
     <div class="nav-bar">
-      <h1 class="M-logo">JL</h1>
+      <a href="home.php"><h1 class="M-logo">JL</h1></a>
     </div>
-    
-    <h2>Register now to find the job that you've been looking for</h2>
       <form class="rform" method="post" name="myform">
         <label>Username</label><br>
         <input type="username" name="username" id="username" /><br><br>
