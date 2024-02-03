@@ -3,7 +3,7 @@ body {
 }
 
 .nav-bar {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     position: fixed;
     top: 0;
     left: 0;
@@ -12,7 +12,7 @@ body {
 
 .M-logo {
     display: inline-block;
-    color: rgb(255, 255, 255);
+    color: rgb(229, 52, 52);
     margin-left: 5em;
     margin-right: 1em;
     padding-left: 7px;
