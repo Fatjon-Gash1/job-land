@@ -1,3 +1,18 @@
+<?php
+include('database.php');
+
+session_start();
+
+if (!isset($_SESSION['username'])) {
+    header("Location: login.php");
+    exit();
+}
+
+echo "Welcome, " . $_SESSION['username'];
+?>
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,6 +25,7 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <script src="header.js" defer></script>
+  <script src="checkLogin.js" defer></script>
 
   <title>Home | JobLand</title>
 </head>

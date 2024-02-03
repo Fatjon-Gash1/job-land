@@ -1,3 +1,8 @@
+<?php
+include('database.php');
+
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,42 +18,29 @@
 <body>
   <?php
   include 'header.php';
+
+  $sql = "SELECT job_name, company_logo, job_description FROM jobs";
+  $result = $conn->query($sql);
+
+  if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+      echo '<div class="item">';
+      echo '<div id="job-name">' . $row['job_name'] . '</div>';
+      echo '<div class="job-C-img">';
+      echo '<img src="images/jobs/' . $row['company_logo'] . '" alt="Company Logo">';
+      echo '<p id="job-desc">' . $row['job_description'] . '</p>';
+      echo '</div>';
+      echo '</div>';
+    }
+  } else {
+    echo '<p>No jobs found</p>';
+  }
+
+  $conn->close();
   ?>
-  <div class="job-nav"></div>
-  <h1 class="job-h1">Find the job you need from companies all over the world!</h1>
-  <div class="grid">
-    <div class="item">
-      <div id="job-name">job 1</div>
-      <div class="job-C-img">
-        <img src="images/jobs/company-logo.png" alt="img">
-        <p id="job-desc">Job description</p>
-      </div>
-    </div>
-    <div class="item">
-      <div id="job-name">job 1</div>
-      <div class="job-C-img">
-        <img src="images/jobs/company-logo.png" alt="img">
-        <p id="job-desc">Job description</p>
-      </div>
-    </div>
-    <div class="item">
-      <div id="job-name">job 1</div>
-      <div class="job-C-img">
-        <img src="images/jobs/company-logo.png" alt="img">
-        <p id="job-desc">Job description</p>
-      </div>
-    </div>
-    <div class="item">
-      <div id="job-name">job 1</div>
-      <div class="job-C-img">
-        <img src="images/jobs/company-logo.png" alt="img">
-        <p id="job-desc">Job description</p>
-      </div>
-    </div>
-  </div>
 </body>
 
 </html>
 <?php
-include('footer.php');
+include 'footer.php';
 ?>

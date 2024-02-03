@@ -1,56 +1,59 @@
-document.addEventListener("DOMContentLoaded", function (event) {
-    const button = document.getElementById('submit');
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector('.rform');
+    const usernameInput = document.getElementById('usernameR');
+    const emailInput = document.getElementById('emailR');
+    const passwordInput = document.getElementById('passwordR');
 
-    const validate = (event) => {
-        event.preventDefault();
+    form.addEventListener('submit', function (event) {
+        if (!validateForm()) {
+            event.preventDefault();
+        }
+    });
 
-        const emri = document.getElementById('username');
-        const emaili = document.getElementById('email');
-        const password = document.getElementById('password');
+    const validateForm = () => {
+        let isValid = true;
 
-        if (emri.value === "") {
-            alert("Ju lutem shtoni emrin tuaj.");
-            emri.focus();
-            return false;
+        resetValidation();
+
+        if (usernameInput.value.trim() === '') {
+            isValid = false;
+            showValidationMessage(usernameInput, 'Please fill in the username field.');
         }
 
-        if (emaili.value === "") {
-            alert("Ju lutem shtoni emailin tuaj.");
-            emaili.focus();
-            return false;
+        if (emailInput.value.trim() === '') {
+            isValid = false;
+            showValidationMessage(emailInput, 'Please fill in the email field.');
+        } else if (!isValidEmail(emailInput.value.trim())) {
+            isValid = false;
+            showValidationMessage(emailInput, 'Please enter a valid email address.');
         }
 
-        if (password.value === "") {
-            alert("Ju lutem shtoni Fjalkalimin tuaj.");
-            password.focus();
-            return false;
+        if (passwordInput.value.trim() === '') {
+            isValid = false;
+            showValidationMessage(passwordInput, 'Please fill in the password field.');
+        } else if (passwordInput.value.length < 8 || passwordInput.value.length > 12) {
+            isValid = false;
+            showValidationMessage(passwordInput, 'Password must be between 8 and 12 characters.');
         }
 
-        if (password.value.length < 8) {
-            alert("Fjalkalimi duhet te kete se paku 8 karaktere");
-            password.focus();
-            return false;
-        }
-
-        if (!checkemail(emaili.value)) {
-            alert("Ju lutem te shtoni emailin korrekt!");
-            emaili.focus();
-            return false;
-        }
-
-        return registerAndRedirect();
-        
-    }
-
-    const checkemail = (email) => {
-        const emailRegex = /^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,4})$/;
-        return emailRegex.test(email.toLowerCase());
-    }
-
-    const registerAndRedirect = () => {
-            alert("Te dhenat u regjistruan me sukses");
-            window.location.href = "home.html";
+        return isValid;
     };
 
-    button.addEventListener('click', validate);
-});       
+    const isValidEmail = (email) => {
+        const emailRegex = /^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,4})$/;
+        return emailRegex.test(email.toLowerCase());
+    };
+
+    const showValidationMessage = (inputElement, message) => {
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'validation-error';
+        errorDiv.textContent = message;
+
+        inputElement.parentElement.appendChild(errorDiv);
+    };
+
+    const resetValidation = () => {
+        const errorMessages = document.querySelectorAll('.validation-error');
+        errorMessages.forEach(message => message.remove());
+    };
+});

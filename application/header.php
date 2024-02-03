@@ -15,5 +15,6 @@
     <div class="reg_log">
       <li><a href="register.php">Register</a></li>
       <li><a href="login.php">Login</a></li>
+      <li><button class="logout-btn" id="logoutButton" style="display:block" onclick="logout()">Logout</button></li>
     </div>
   </div>
