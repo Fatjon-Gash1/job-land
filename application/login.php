@@ -9,16 +9,17 @@
     
     <title>Log In | JobLand</title>
   </head>
-  <body>
-    <div class="nav-bar">
-      <a href="home.php"><h1 class="M-logo">JL</h1></a>
-    </div>
+  <body style="background-color: rgba(43, 125, 196, 0.6)">
+   <?php
+    include('header.php');
+    ?> 
+    <div class="job-nav"></div>
       <form class="rform" method="post" name="myform">
         <label>Username</label><br>
-        <input type="username" name="username" id="username" /><br><br>
+        <input type="username" name="username" id="usernameR" /><br><br>
         <label>Password</label><br>
-        <input type="password" name="password" id="password" minlength="8" maxlength="12"/><br><br>
-        <input type="button" value="Login" id="submit" onclick="validate()"/><br>
+        <input type="password" name="password" id="passwordR" minlength="8" maxlength="12"/><br><br>
+        <input class="submit_reg" type="button" value="Login" id="submit" onclick="validate()"/><br>
         <label id="remember" for="remember"><input type="checkbox" id="remember" name="remember">Remember me
         </label><br>
         <p id="forgot">Forgot <a href="forgot.html"><span>password?</span></a></p>
