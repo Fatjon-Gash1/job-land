@@ -8,19 +8,21 @@ body {
 }
 
 .nav-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: transparent;
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 1;
+  margin-right: 1em;
 }
 
 .job-nav {
   position: fixed;
   top: 0;
   display: flex;
-  background-color: rgb(0, 104, 188);
+  background-color: rgb(0, 0, 0);
   width: 100%;
   height: 100px;
 }
@@ -34,27 +36,18 @@ body {
 } */
 
 .M-logo {
-  display: inline-block;
+  position: fixed;
+  z-index: 1;
+  margin: 0 5em 1em 15em;
   color: rgb(255, 255, 255);
-  margin: 15px 1em 0 6em;
-  padding-left: 9px;
+  padding: 1px 10px 1px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 600;
-  font-size: xx-large;
+  font-size: large;
   text-shadow: #000000 1px 1px 2px;
   border: 3px solid white;
   box-shadow: #000000 1px 1px 4px;
-  border-radius: 10%;
-}
-
-#n-logo {
-  width: 20px;
-  display: block;
-  text-shadow: #000000 1px 1px 2px;
-  position: absolute;
-  right: 0;
-  padding-right: 32em;
-  top: 2em;
+  border-radius: 10px;
 }
 
 .list-0 {
@@ -63,70 +56,153 @@ body {
 }
 
 .list {
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 14px;
   font-weight: 600;
   font-size: large;
   list-style: none;
-  margin: 10px;
   text-shadow: #000000 0.5px 0.5px 1.5px;
-  min-width: fit-content;
-}
-
-@media screen and (max-width: 600px) {
-  .list {
-    margin-left: 1em;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .M-logo {
-    margin-top: 1em;
-    margin-left: 1em;
-  }
 }
 
 .list li {
   padding: 5px 10px 5px;
-  margin-right: 10px;
+  margin: 5px 1em 5px;
   border-right: 5px solid white;
-  border-radius: 13px;
+  border-radius: 10px;
 }
 
 .reg_log {
+  position: fixed;
+  right: 0;
   background-color: transparent;
-  display: inline-flex;
   margin-top: 2em;
-  float: right;
-  margin-right: 5em;
-  text-align: center;
-  /* border: 2px solid white; */
-  border-radius: 20px;
+  margin-right: 1em;
   color: white;
-  font-size: 17px;
+  z-index: 1;
 }
 
-@media screen and (max-width: 740px) {
+.reg_log button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 1300px) {
   .reg_log {
+    margin-top: 4em;
+  }
+  
+  .job-nav {
+    height: 130px;
+  }
+  
+  .M-logo {
+    margin-top: 2em;
+    margin-left: 1em;
+  }
+}
+
+.dropbtn {
+  display: none;
+  background-color: transparent;
+  color: white;
+  font-size: large;
+  border: none;
+  cursor: pointer;
+  text-shadow: #000000 1px 1px 3px;
+}
+
+.sidebar {
+  display: none;
+}
+
+@media screen and (max-width: 615px) {
+ .list {
+    display: none;
+  }
+
+  .nav-bar {
+    justify-content: left;
+    margin-left: 2em;
+  }
+  
+  .dropbtn {
     display: block;
-    float: left;
+  }
+  
+  .reg_log {
+    margin-top: 0;
+  }
+
+  .sidebar {
+    display: block;
+    height: auto;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 3em;
+    left: 0;
+    background-color: #000000;
+    overflow-x: hidden;
+    transition: 0.5s;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
     margin-bottom: 1em;
   }
+  
+  .sidebar li {
+    padding: 1em 1em 0;
+    text-align: center;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+    border-radius: 10px;
+  }
+  
+  .sidebar a:hover {
+    background-color: #2e2e2e;
+    color: white;
+  }
+  
+}
+
+@media screen and (max-width: 320px) {
+  .M-logo {
+    display: none;
+  }
+
+  .job-nav {
+    height: 220px;
+  }
+
+
+  
 }
 
 .reg_log li {
   background-color: transparent;
-  border-bottom: 2px solid white;
-  border-right: 4px solid white;
-  padding: 5px;
   font-size: 17px;
+  padding: 7px;
+  border-radius: 5px;
   font-weight: 600;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin-left: 12px;
   display: inline-flex;
-  border-radius: 5px;
-  text-shadow: #000000 0.5px 0.5px 1.5px;
 }
 
 .reg_log li:hover {
@@ -174,22 +250,28 @@ body {
   margin: 15px;
   padding: 10px;
 }
-  
+
+.rform-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .rform {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 6em 2em; 
+  width: 600px;
+  margin: 6em 2em 3em;
   text-align: center;
   background-color: rgb(0, 0, 0);
   border-radius: 40px;
-  padding: 0 2em 1em; 
+  padding: 0 2em 1em;
   color: white;
   box-shadow: #000000 0.5px 0.5px 13px;
   font-size: 20px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  min-width: 25%;
 }
 
 .rform label {
@@ -199,7 +281,9 @@ body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.rform input[type="text"],[type="email"],[type="password"] {
+.rform input[type="text"],
+[type="email"],
+[type="password"] {
   margin: 2em;
   padding: 10px;
   font-size: 14px;
@@ -218,7 +302,6 @@ body {
   .rform input {
     max-width: 100%;
   }
-  
 }
 
 .register-header {
@@ -234,6 +317,8 @@ body {
 }
 
 .submit_reg {
+  display: flex;
+  align-items: center;
   background-color: #0088ff;
   color: rgb(255, 255, 255);
   border: none;
@@ -241,7 +326,7 @@ body {
   padding: 15px 2em;
   text-align: center;
   text-decoration: none;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
@@ -257,27 +342,38 @@ body {
   color: #0a66c2;
 }
 
+#rp-login {
+  margin-left: 4px;
+}
+
 .social_buttons {
-  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 290px;
+  background-color: rgba(255, 255, 255, 0.123);
   color: white;
   border: 1px solid white;
   border-radius: 25px;
-  padding: 10px 5em;
+  padding: 10px 0;
   margin: 8px;
   text-align: center;
   text-decoration: none;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 13px;
-  font-weight: 300;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
   cursor: pointer;
 }
 
-.test_btn {
-  background-color: white;
+.social_buttons img {
+  width: 20px;
+  margin-right: 0.7em;
 }
 
-.test_btn img{
-    width: 20px;
+@media screen and (max-width: 400px) {
+  .social_buttons {
+    max-width: 100%;
+  }
 }
 
 #remember {
@@ -531,44 +627,11 @@ h2 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.dropdown {
-  border: 2px solid white;
-  border-radius: 10px;
-  display: inline-flex;
-  margin: 2em 10px 10px 17em;
-  padding-right: 10px;
-}
-
-.dropbtn {
-  background-color: transparent;
-  color: white;
-  border: none;
-  padding: 1px;
-  margin-left: 1em;
-  cursor: pointer;
-  text-shadow: #000000 1px 1px 3px;
-}
-
-@media screen and (max-width: 450px) {
-  .dropdown {
-    margin-left: 1em;
-    margin-top: 1em;
-  }
-
-  .list {
-    display: block;
-    background-color: #000000;
-    min-width: 160px;
-    z-index: 1;
-    margin-left: 1em;
-  }
-}
-
 .list li:hover {
   background-color: rgba(255, 255, 255, 0.174);
 }
 
-.dropdown:hover .dropbtn {
+.dropbtn:hover {
   transition: ease-in-out 0.5s;
   transform: rotate(180deg);
 }
@@ -645,10 +708,3 @@ h2 {
   display: block;
 }
 
-.logout-btn {
-  background-color: transparent;
-  border: none;
-  color: white;
-  font-weight: 600;
-  text-shadow: #000000 1px 1px 3px;
-}
