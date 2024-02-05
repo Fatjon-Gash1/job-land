@@ -17,10 +17,11 @@ session_start();
 
 <body>
   <?php
-  include 'header.php';
-  ?>
+  include('header.php');
 
-  <div class="job-nav"></div>
+  ?>
+  <div class="job-nav">
+  </div>
 
   <?php
 
@@ -48,4 +49,5 @@ session_start();
 <?php
 include 'footer.php';
 ?>
+
 </html>
