@@ -45,10 +45,10 @@ include("database.php");
   </div>
 </body>
 
-</html>
 <?php
 include('footer.php');
 ?>
+</html>
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
