@@ -23,6 +23,8 @@ session_start();
     </header>
 
     <nav class="news-nav">
+        <input type="search" name="search" id="news-search">
+
         <ul id="ul-news">
 
             <li><a href="#section1">test</a></li>
