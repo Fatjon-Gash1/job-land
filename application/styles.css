@@ -713,3 +713,6 @@ h2 {
   display: block;
 }
 
+.about-img {
+  border-radius: 15px;
+}
