@@ -3,7 +3,6 @@ include('database.php');
 
 session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +10,6 @@ session_start();
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <script src="header.js" defer></script>
 
   <title>Jobs | JobLand</title>
@@ -19,13 +17,13 @@ session_start();
 
 <body>
   <?php
-  include('header.php');
+  include 'header.php';
+  ?>
 
-?>
-  <div class="job-nav">
-  </div>
+  <div class="job-nav"></div>
 
-<?php
+  <?php
+
   $sql = "SELECT job_name, company_logo, job_description FROM jobs";
   $result = $conn->query($sql);
 
@@ -48,6 +46,6 @@ session_start();
 </body>
 
 <?php
-include('footer.php');
+include 'footer.php';
 ?>
 </html>
