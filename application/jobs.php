@@ -3,6 +3,7 @@ include('database.php');
 
 session_start();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,37 +14,44 @@ session_start();
   <script src="header.js" defer></script>
 
   <title>Jobs | JobLand</title>
+  <style>
+    .job-div {
+      border-radius: 8px;
+      margin: 10px;
+      padding: 10px;
+    }
+  </style>
 </head>
 
 <body style="background-color: #c7dcff;">
   <?php
   include('header.php');
-
   ?>
   <div class="job-nav">
-  </div>
+    <?php
+    $sql = "SELECT * FROM jobs";
+    $result = $conn->query($sql);
 
-  <?php
-
-  $sql = "SELECT job_name, company_logo, job_description FROM jobs";
-  $result = $conn->query($sql);
-
-  if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-      echo '<div class="item">';
-      echo '<div id="job-name">' . $row['job_name'] . '</div>';
-      echo '<div class="job-C-img">';
-      echo '<img src="images/jobs/' . $row['company_logo'] . '" alt="Company Logo">';
-      echo '<p id="job-desc">' . $row['job_description'] . '</p>';
-      echo '</div>';
-      echo '</div>';
+    if ($result->num_rows > 0) {
+      while ($row = $result->fetch_assoc()) {
+    ?>
+        <div class="job-div">
+          <h2><?php echo $row['title']; ?></h2>
+          <p>Company: <?php echo $row['company']; ?></p>
+          <p>Description: <?php echo $row['description']; ?></p>
+          <p>Salary: <?php echo $row['salary']; ?></p>
+          <p>Location: <?php echo $row['location']; ?></p>
+          <p>Category: <?php echo $row['category']; ?></p>
+        </div>
+    <?php
+      }
+    } else {
+      echo "No jobs found.";
     }
-  } else {
-    echo '<p>No jobs found</p>';
-  }
 
-  $conn->close();
-  ?>
+    $conn->close();
+    ?>
+  </div>
 </body>
 
 <?php
