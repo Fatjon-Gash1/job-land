@@ -89,7 +89,7 @@ echo "Welcome, " . $_SESSION['username'];
   </script>
 </body>
 
-</html>
 <?php
 include('footer.php');
 ?>
+</html>
