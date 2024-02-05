@@ -16,13 +16,13 @@ session_start();
     <title>About | JobLand</title>
 </head>
 
-<body>
+<body style="background-color: #000000;">
     <?php
     include('header.php');
     ?>
     <div class="job-nav"></div>
     <div style="text-align: center;" class="about-section">
-        <h2 style="text-align: center; margin-top: 1em; color: #000000">About Job Land</h2><br>
+        <h2 style="margin-top: 1em;">About Job Land</h2><br>
         <p style="margin-bottom: 3em;">JobBoard Co. is a leading platform connecting employers with talented professionals. <br>Our mission is to facilitate meaningful connections that empower individuals to achieve their career goals and help businesses thrive through strategic hiring.</p>
 
         <img class="about-img" src="images/conference.jpeg" alt="img" width="800" height="450">

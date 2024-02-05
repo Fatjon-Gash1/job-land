@@ -484,7 +484,7 @@ h2 {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #fff;
   border-radius: 18px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 .contact-form input{
@@ -575,7 +575,7 @@ h2 {
   background-color: transparent;
   border: 2px solid white;
   border-radius: 20px;
-  height: 30px;
+  height: 50px;
 }
 
 .select-search {
@@ -606,9 +606,13 @@ h2 {
   cursor: pointer;
   border: none;
   margin-left: 7px;
+  text-shadow: #000000 1px 1px 10px;
 }
 
 .section-0 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   z-index: -1;
   background-color: #fff;
@@ -616,7 +620,8 @@ h2 {
 }
 
 .slider {
-  width: 40%;
+  width: 60%;
+  height: 100%;
   margin: 20px auto;
 }
 
@@ -642,7 +647,6 @@ h2 {
 }
 
 #sliderHeader {
-  margin-top: 3em;
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -651,54 +655,141 @@ h2 {
   margin-top: 2em;
   color: #000000;
   display: flex;
-  text-align: right;
-  justify-content: right;
-  align-items: right;
-  background-color: #006cd0;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
   box-shadow: #000000 1px 1px 13px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #ul-news {
   display: inline-flex;
-  padding: 15px;
-  margin: 1em;
+  padding: 0 15px 0;
+  margin: 1.5em 4em 1.5em;
   color: #000000;
 }
 
 #ul-news li {
-  display: inline-flex;
+  list-style-type: none;
   font-size: 18px;
-  padding-right: 15px;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  border-radius: 7px;
+  text-shadow: #000000 1px 1px 13px;
+  margin: 0;
+  padding: 8px 15px 8px;
+}
+
+.side-nav {
+  display: flex;
+  flex-direction: column;
+  float: left;
+  margin: 2em 2em 4em;
+  background-color: #000000;
+  align-items: center;
+  border-radius: 15px;
+  padding: 0 1em 2em;
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  box-shadow: #000000 1px 1px 10px;
+}
+
+.side-nav-body {
+  margin-top: 2em;
+}
+
+.side-nav-body ul li {
+  list-style: none;
+  padding: 1em 0 1em;
+  border-bottom: 2px solid white;
+  width: 300px;
+  max-width: 100%;
 }
 
 .news-main {
   display: flex;
-  background-color: #006cd0;
+  flex-direction: column;
+  background-color: #000000;
   align-items: center;
   justify-content: center;
-  margin: 1em 2em 1em;
+  margin: 2em 2em 4em;
   border-radius: 15px;
   color: #000000;
+  box-shadow: #000000 1px 1px 10px;
+}
+
+
+#news-search {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  height: 45px;
+  width: 30%;
+  margin-left: 1em;
+  border: none;
+  box-shadow: #000000 1px 1px 10px;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+@media screen and (max-width: 850px) {
+  #news-search {
+    display: none;
+  }
+  
+}
+
+@media screen and (max-width: 1080px) {
+  .side-nav {
+    display: none;
+  }
+
+  .news-main {
+    float: none;
+  }
+  
+}
+
+@media screen and (max-width: 600px) {
+  #ul-news {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #ul-news li {
+    border: none;
+    border-bottom: 2px solid white;
+    border-radius: 12px;
+  }
+  
 }
 
 .news-main section {
-  background-color: rgb(206, 204, 204);
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
   border-radius: 15px;
-  margin: 3em 2em 1em;
-  width: 50%;
+  margin: 3em 1em 1em;
+  width: 75%;
   color: #000000;
   border: 2px solid white;
   padding: 15px;
-  box-shadow: #000000 1px 1px 13px;
+  padding-top: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .news-main section h2 {
-  color: #403f3f;
+  padding-top: 20px;
+  color: #000000;
+  margin-bottom: 1em;
 }
 
 .news-main section article {
-  margin-top: 1.5em;
+  padding: 1.5em;
+  font-size: 18px;
 }
 
 .error {
@@ -713,12 +804,12 @@ h2 {
   display: block;
 }
 
-.about-img {
-  border-radius: 15px;
+.about-section {
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
 }
 
-#news-search {
-  display: flex;
-  justify-content: left;
-  align-items: left;
+.about-img {
+  border-radius: 15px;
 }

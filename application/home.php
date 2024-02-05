@@ -66,8 +66,9 @@ echo "Welcome, " . $_SESSION['username'];
     <div class="sectionE">Apply for it <i class="fa-solid fa-pen"></i></div>
     <div class="sectionE">Start your career <i class="fa-solid fa-star"></i></div>
   </div>
+  <h1 style="background-color: white;padding: 2em 1em 0; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Top companies that work for us:</h1>
   <section class="section-0">
-    <h1 id="sliderHeader">Top companies that are hiring on our platform</h1>
+    <h1 id="sliderHeader">If you're looking to start a proffessional career look no more than Job Land!</h1>
     <div class="slider">
       <div><img src="images/jobs/cocacola.jpg" alt="Image 1"></div>
       <div><img src="images/jobs/8867.Microsoft_5F00_Logo_2D00_for_2D00_screen-1024x376.jpg" alt="Image 2"></div>

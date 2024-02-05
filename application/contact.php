@@ -15,7 +15,7 @@ session_start();
   <title>Contact us | JobLand</title>
 </head>
 
-<body>
+<body style="background-color: #c7dcff;">
   <?php
   include('header.php');
   ?>

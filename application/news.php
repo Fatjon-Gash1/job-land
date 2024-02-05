@@ -12,31 +12,43 @@ session_start();
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
-<body style="background-color: rgba(43, 125, 196, 0.5);">
+<body style="background-color: #c7dcff;">
     <?php
     include('header.php');
     ?>
     <div class="job-nav"></div>
     <div>
-    <header style="text-align: center; margin-top: 8em;">
-        <h1 style="padding-bottom: 7px; color: white; border-bottom: 3px solid rgb(43, 125, 196); text-shadow: #000000 0 0 12px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">Latest News</h1>
+    <header style="text-align: center; margin-top: 9em;">
+        <h1 style="padding-bottom: 7px; color: white; text-shadow: #000000 0 0 12px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">Latest News</h1>
     </header>
 
     <nav class="news-nav">
-        <input type="search" name="search" id="news-search">
+        <input type="search" placeholder="Search for the latest and greatest" name="search" id="news-search">
 
         <ul id="ul-news">
 
-            <li><a href="#section1">test</a></li>
-            <li><a href="#section1">test2</a></li>
-            <li><a href="#section1">test3</a></li>
-            <li><a href="#section1">test4</a></li>
-            <li><a href="#section1">Innovation</a></li>
-            <li><a href="#section2">Technology</a></li>
-            <li><a href="#section3">New Companies</a></li>
+            <li><a href="#section1">Company Spotlights</a></li>
+            <li><a href="#section2">Hiring Trends</a></li>
+            <li><a href="#section3">Career Advice</a></li>
+            <li><a href="#section4">New Companies</a></li>
+            <li><a href="#section5">Job Market reports</a></li>
         </ul>
     </nav>
 
+    <div class="side-nav">
+        <div class="side-nav-header">
+            <h2>Categories</h2>
+        </div>
+        <div class="side-nav-body">
+            <ul>
+                <li><a href="#section1">Company Spotlights</a></li>
+                <li><a href="#section2">Hiring Trends</a></li>
+                <li><a href="#section3">Career Advice</a></li>
+                <li><a href="#section4">New Companies</a></li>
+                <li><a href="#section5">Job Market reports</a></li>
+            </ul>
+        </div>
+    </div>
     <main class="news-main">
         <section id="section1">
             <h2>Innovation</h2>
