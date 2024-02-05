@@ -716,3 +716,9 @@ h2 {
 .about-img {
   border-radius: 15px;
 }
+
+#news-search {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
