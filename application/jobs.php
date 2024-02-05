@@ -3,6 +3,7 @@ include('database.php');
 
 session_start();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +19,7 @@ session_start();
 
 <body>
   <?php
-  include 'header.php';
+  include('header.php');
 
 ?>
   <div class="job-nav">
