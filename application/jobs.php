@@ -23,7 +23,7 @@ session_start();
   </style>
 </head>
 
-<body style="background-color: #c7dcff;">
+<body>
   <?php
   include('header.php');
   ?>
