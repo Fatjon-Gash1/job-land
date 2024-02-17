@@ -10,20 +10,20 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>News | Job Land</title>
 </head>
-<body style="background-color: #c7dcff;">
+<body>
     <?php
     include('header.php');
     ?>
     <div class="job-nav"></div>
     <div>
-    <header style="text-align: center; margin-top: 9em;">
-        <h1 style="padding-bottom: 7px; color: white; text-shadow: #000000 0 0 12px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">Latest News</h1>
+    <header style="text-align: center; margin-top: 8em;">
+        <h1 style="padding: 1em; background-color: #000000; box-shadow: #000000 0 0 10px; color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">Latest News</h1>
     </header>
 
     <nav class="news-nav">
-        <input type="search" placeholder="Search for the latest and greatest" name="search" id="news-search">
+        <input type="search" placeholder="Search for the latest news" name="search" id="news-search">
 
         <ul id="ul-news">
 
