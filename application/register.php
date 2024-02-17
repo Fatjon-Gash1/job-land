@@ -17,13 +17,6 @@ include("database.php");
 </head>
 
 <body>
-
-  <?php
-  include('header.php');
-  ?>
-
-  <div class="job-nav"></div>
-
   <div class="rform-div">
     <form class="rform" action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
       <div class="register-header">
@@ -36,9 +29,9 @@ include("database.php");
       <input class="submit_reg" type="submit" name="submit" value="Agree & Register" id="submit">
       <p>By clicking Agree & Register, <br> you agree to the JobLand <span>User Agreement</span>, <span>Privacy Policy</span>, <br> and <span>Cookie Policy</span>.</p>
 
-      <button class="social_buttons" type="button"><img src="images/google.png" alt="img"> Continue with Google</button>
-      <button class="social_buttons" type="button"><img src="images/twitter.png" alt="img"> Sign in with Twitter</button>
-      <button class="social_buttons" type="button"><img src="images/github.png" alt="img"> Sign in with Github</button>
+      <button class="social_buttons" type="button"><img src="images/google.png" alt="img"><a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Faccounts.google.com%2F&followup=https%3A%2F%2Faccounts.google.com%2F&ifkv=ATuJsjxmLrtFZ4EGS7NyROIpqsLhJf8WM1_6NWuaZH9-d3DCk_GTQE1YGgYJR-La0G4cSa8740S6&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S504026482%3A1708206817060372&theme=glif">Continue with Google</button>
+      <button class="social_buttons" type="button"><img src="images/twitter.png" alt="img"><a href="https://twitter.com/i/flow/login"> Sign in with Twitter</button>
+      <button class="social_buttons" type="button"><img src="images/github.png" alt="img"><a href="https://github.com/login"> Sign in with Github</button>
 
       <p>Already have an account? <a href="login.php"><span id="rp-login">Login</span></a></p>
     </form>
