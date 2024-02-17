@@ -17,12 +17,6 @@ include("database.php");
 </head>
 
 <body>
-  <?php
-  include('header.php');
-  ?>
-
-  <div class="job-nav"></div>
-
   <div class="rform-div">
     <form class="rform" action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
       <h2 style="margin-bottom: 1em;">Log In</h2>
