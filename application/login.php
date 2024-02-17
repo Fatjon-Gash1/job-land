@@ -16,7 +16,7 @@ include("database.php");
   <title>Log In | JobLand</title>
 </head>
 
-<body style="background-color: #c7dcff">
+<body>
   <?php
   include('header.php');
   ?>
@@ -25,7 +25,7 @@ include("database.php");
 
   <div class="rform-div">
     <form class="rform" action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
-      <h2 style="margin-bottom: 1em;">Log in</h2>
+      <h2 style="margin-bottom: 1em;">Log In</h2>
       <input type="text" placeholder="Username" name="username" id="usernameR" /><br><br>
       <input type="password" placeholder="Password" name="password" id="passwordR" minlength="8" maxlength="12" /><br><br>
       <input style="margin-bottom: 1em;" class="submit_reg" type="submit" value="Login" id="submit" onclick="validate()" /><br>
