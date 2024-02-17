@@ -16,7 +16,7 @@ include("database.php");
   <title>Sign Up | JobLand</title>
 </head>
 
-<body style="background-color: #c7dcff">
+<body>
 
   <?php
   include('header.php');
