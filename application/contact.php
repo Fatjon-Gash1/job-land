@@ -15,7 +15,7 @@ session_start();
   <title>Contact us | JobLand</title>
 </head>
 
-<body style="background-color: #c7dcff;">
+<body>
   <?php
   include('header.php');
   ?>
@@ -24,7 +24,7 @@ session_start();
 
   <h1 id="contact-h1">Contact Us</h1>
   <p id="contact-p">Are you ready to take the next step in your career or find the perfect candidate for your company?<br>
-    Our dedicated team at [Your Company Name] is here to assist you. <br>
+    Our dedicated team at Job Land is here to assist you. <br>
     Whether you're a job seeker looking for exciting opportunities or an employer seeking top-tier talent,
     we're committed to providing exceptional service.</p>
   <div class="Cform-div">
@@ -44,7 +44,7 @@ session_start();
   <h2 id="office-h2">Office Hours:</h2>
   <p id="endingC-p">Monday to Friday: 9:00 AM - 5:00 PM<br>
     Our team of experts is eager to address any inquiries, assist with job postings, or guide you through our platform. <br>
-    At [Your Company Name], we believe in connecting people with meaningful opportunities,<br>
+    At Job Land, we believe in connecting people with meaningful opportunities,<br>
     and we look forward to being part of your journey.
   </p><br>
   <p id="lastC-p"><b>Join us in shaping the future of careers! We're here to help you succeed.</b></p>
