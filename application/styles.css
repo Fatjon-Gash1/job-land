@@ -444,14 +444,77 @@ h2 {
 }
 
 .footer {
-  text-align: center;
+  position: relative;
   color: white;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 10px;
   background-color: #000000;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: bottom;
+  margin: 0 5em;
+}
+
+@media screen and (max-width: 660px) {
+  .footer-container {
+    margin: 0;
+  }  
+
+}
+
+@media screen and (max-width: 550px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: left;
+    margin: 0 25%;
+  }
+  
+  .footer-section {
+    margin: 0;
+  }
+  
+}
+
+@media screen and (max-width: 445px) {
+  .footer-container {
+    margin: 0;
+  }
+  
+}
+
+.footer-section {
+  margin: 2em 3em;
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+}
+
+.footer-section p {
+  text-decoration: underline;
+  margin-bottom: 1em;
+  font-size: 14px;
+}
+
+.footer-section.footer-section_3 p {
+  text-decoration: none;
+}
+
+#lang_select {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+}
+
+.footer-bottom {
+  background-color: #181818;
+  text-align: center;
+}
+
+.footer-bottom {
+  padding: 10px 0 5px;
 }
 
 #contact-h1 {
@@ -884,4 +947,14 @@ h2 {
 
 .about-img {
   border-radius: 15px;
+}
+
+.fsocial-icons button {
+  margin: 7px;
+  background-color: transparent;
+  border: none;
+}
+
+.fsocial-icons img{
+  width: 25px;
 }
