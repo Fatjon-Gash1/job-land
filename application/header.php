@@ -58,5 +58,9 @@ if (isset($_SESSION['username'])) {
       }
     });
   });
+
+  function logout() {
+    window.location.href = "logout_admin.php";
+  }
 </script>
 
