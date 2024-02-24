@@ -35,7 +35,7 @@ include("database.php");
       <input class="submit_reg" type="submit" name="submit" value="Agree & Register" id="submit">
       <p>By clicking Agree & Register, <br> you agree to the JobLand <span>User Agreement</span>, <span>Privacy Policy</span>, <br> and <span>Cookie Policy</span>.</p>
 
-      <p>Existing account? <a href="admin.php"><span id="rp-login">Login</span></a></p>
+      <p>Existing account? <a href="admin_login.php"><span id="rp-login">Login</span></a></p>
     </form>
   </div>
 </body>
