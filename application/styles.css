@@ -294,6 +294,10 @@ body {
   height: 3em;
 }
 
+.rform input[type="password"] {
+  margin-bottom: 1em;
+}
+
 @media screen and (max-width: 380px) {
   .rform input {
     max-width: 100%;
@@ -957,4 +961,10 @@ h2 {
 
 .fsocial-icons img{
   width: 25px;
+}
+
+.error_login {
+  color: red;
+  font-size: 16px;
+  margin: 5px;
 }
