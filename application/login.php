@@ -1,64 +1,46 @@
-<?php
-include("database.php");
-?>
+      <?php
 
-<!DOCTYPE html>
-<html lang="en">
+      // Attempts left
+      $attemptsLeft = $maxAttempts - $_SESSION['login_attempts'];
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <script src="header.js" defer></script>
-  <script src="login_script.js" defer></script>
+      if ($checklogin == 2 && isset($attemptsLeft) && $attemptsLeft > 0) {
+        echo "<p style='color: red'>Incorrect username or password. You have " . $attemptsLeft . ($attemptsLeft == 1 ? ' try' : ' tries') . " left.</p>";
 
-  <title>Log In | JobLand</title>
-</head>
+        // Update the login attempts and last attempt timestamp
+        $_SESSION['login_attempts']++;
+        $_SESSION['last_attempt_time'] = time();
+      }
+      // Check if the user has reached the maximum attempts within the lockout time
+      elseif ($attemptsLeft == 0 && $_SESSION['login_attempts'] >= $maxAttempts) {
+        echo "<p style='color: red' id='lockoutMessage'>Too many login attempts. Please try again later! <br>" .
+          "<span style='color: red' id='countdown'></span></p>";
 
-<body>
-  <div class="rform-div">
-    <form class="rform" action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
-      <h2 style="margin-bottom: 1em;">Log In</h2>
-      <input type="text" placeholder="Username" name="username" id="usernameR" /><br><br>
-      <input type="password" placeholder="Password" name="password" id="passwordR" minlength="8" maxlength="12" /><br><br>
-      <input style="margin-bottom: 1em;" class="submit_reg" type="submit" value="Login" id="submit" onclick="validate()" /><br>
-      <label id="remember" for="remember"><input type="checkbox" id="remember" name="remember">
-      <span style="margin-left: 10px; color: white;">Remember me</span>
-      </label><br>
-      <p id="forgot">Forgot <a href="forgot.php"><span>password?</span></a></p>
-      <p>Don't have an account? <a href="register.php"><span id="rp-login">Register</span></a></p>
-    </form>
-  </div>
-</body>
+        echo "<script>
+            var countdown = document.getElementById('countdown');
+            var timeLeft = {$lockoutTime};
 
-<?php
-include('footer.php');
-?>
-</html>
-<?php
-session_start();
+            function updateCountdown() {
+                countdown.textContent = timeLeft + ' second' + (timeLeft === 1 ? '' : 's') + ' left.';
+                    document.getElementById('submit').disabled = true;
+                    document.getElementById('submit').style.cursor = 'not-allowed';
+                    document.getElementById('submit').style.opacity = '0.5';
+                if (timeLeft === 0) {
+                    clearInterval(interval);
+                    document.getElementById('lockoutMessage').style.display = 'none';
+                    document.getElementById('submit').disabled = false;
+                    document.getElementById('submit').style.cursor = 'pointer';
+                    document.getElementById('submit').style.opacity = '1';
+                  
+                  // AJAX request to the PHP script
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'unset_attempts.php', true);
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        xhr.send();
+                }
+                timeLeft--;
+            }
 
-  $enteredUsername = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
-  $enteredPassword = filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS);
-
-  $sql = "SELECT username, password FROM users WHERE username = ?";
-  $stmt = $conn->prepare($sql);
-  $stmt->bind_param("s", $enteredUsername);
-  $stmt->execute();
-  $stmt->bind_result($dbUsername, $dbPassword);
-  $stmt->fetch();
-
-  if ($enteredUsername == $dbUsername && password_verify($enteredPassword, $dbPassword)) {
-
-    $_SESSION['username'] = $enteredUsername;
-    header("Location: home.php");
-    exit();
-  } else {
-
-    echo "Invalid username or password";
-  }
-}
-?>
+            var interval = setInterval(updateCountdown, 1000);
+          </script>";
+      }
+      ?>
