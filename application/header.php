@@ -40,7 +40,7 @@ if (isset($_SESSION['username'])) {
   } else {
       // User is not logged in, show register and login buttons
       echo '<li><a href="register.php">Register</a></li>';
-      echo '<li><a href="login.php">Login</a></li>';
+      echo '<li><a href="user_login.php">Login</a></li>';
   }
   ?>
 </div>
@@ -60,7 +60,7 @@ if (isset($_SESSION['username'])) {
   });
 
   function logout() {
-    window.location.href = "logout_admin.php";
+    window.location.href = "logout.php";
   }
 </script>
 
