@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['username'])) {
-    header("Location: admin.php");
+    header("Location: admin_login.php");
     exit();
 }
 
@@ -16,7 +16,7 @@ $stmt->bind_result($isAdmin);
 $stmt->fetch();
 
 if ($isAdmin == 0) {
-    header("Location: admin.php");
+    header("Location: admin_login.php");
     exit();
 }
 
