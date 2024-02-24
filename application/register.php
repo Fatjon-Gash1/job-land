@@ -33,7 +33,7 @@ include("database.php");
       <button class="social_buttons" type="button"><img src="images/twitter.png" alt="img"><a href="https://twitter.com/i/flow/login"> Sign in with Twitter</button>
       <button class="social_buttons" type="button"><img src="images/github.png" alt="img"><a href="https://github.com/login"> Sign in with Github</button>
 
-      <p>Already have an account? <a href="login.php"><span id="rp-login">Login</span></a></p>
+      <p>Already have an account? <a href="user_login.php"><span id="rp-login">Login</span></a></p>
     </form>
   </div>
 </body>
