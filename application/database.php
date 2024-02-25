@@ -12,11 +12,4 @@ catch(mysqli_sql_exception){
     echo "connection failed";
 }
 
-if ($conn) {
-    echo "You are connected! <br>";
-}
-
-else {
-    echo "You are not connected! <br>";
-}
 ?>
